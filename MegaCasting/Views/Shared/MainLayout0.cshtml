@@ -1,4 +1,63 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"] - MegaCasting</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="~/js/angular.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
+    <script src="~/js/module/megacasting.module.js" type="text/javascript"></script>
+    <script src="~/js/controller/navbar.collapse.controller.js" type="text/javascript"></script>
+</head>
+<body ng-app="megacasting">
+    <div class="content" id="page" ng-controller="menuCollapse">
+        <header>
+
+            <nav>
+                <div class="title">
+                    <h1>MegaCasting</h1>
+                </div>
+                <div class="menu">
+                    <div class="arrow">
+                        <div class="arrowBlock untoggled" id="arrow0">
+                            <i class="fas fa-caret-up"></i>
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                        <div class="clickArrow" ng-click="toggleMenu();">
+
+                        </div>
+                    </div>
+                    <div class="list untoggled" id="list0">
+
+                        <ul>
+                            <!--foreach(page in ViewData["site"].pages) { }
+                                -->
+                            <li><a href="">Casting</a></li>
+                            <li><a href="">Artistes</a></li>
+                            <li><a href="">Proposer un casting</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Connexion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            @RenderBody();
+        </main>
+        <footer>
+            <div class="partners">
+                <span>nos partenaires valorisés</span>
+            </div>
+            <div class="contactUs">
+                <span>Contactez nous</span>
+            </div>
+            <div class="entreprise"></div>
+            <div class="artiste"></div>
+
+        </footer>
+    </div>
+</body>
+</html>

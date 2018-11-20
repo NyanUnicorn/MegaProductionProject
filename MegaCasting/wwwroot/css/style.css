@@ -1,0 +1,191 @@
+﻿:root {
+    --color-shade-i1: #fefffd;
+    --color-shade-i2: #f3f4f2;
+    --color-shade-i5: #6b6b6b;
+    --color-shade-i6: #76923C;
+    --len-nav-content0: 90px;
+    --len-nav-outer0: 110px;
+}
+
+body {
+    margin: 0;
+    display: grid;
+}
+
+header {
+    width: 100%;
+    color: var(--color-shade-i5);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    background-color: var(--color-shade-i1);
+    border-bottom: 2px solid var(--color-shade-i2);
+    width: 100%;
+    height: 110px;
+    display: grid !important;
+    padding: 10px 0;
+    grid-template-columns: 300px auto;
+    z-index: 2;
+}
+
+nav .title {
+    grid-column: 1;
+    border-right: 3px solid var(--color-shade-i5);
+    margin: auto;
+    padding: 0 20px;
+    font-size: 25px;
+}
+
+nav .title h1 {
+    text-align: center;
+    margin: auto;
+}
+
+nav .menu {
+    grid-column: 2;
+    height: 90px;
+    background-color: var(--color-shade-i1);
+}
+
+nav .menu .arrow {
+    height: 90px;
+    overflow: hidden;
+    position: relative;
+}
+
+nav .menu .clickArrow {
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+}
+
+nav .menu .arrowBlock {
+    height: 90px;
+    position: relative;
+    top: -90;
+    transition: 0.2s;
+}
+
+nav .menu .arrowBlock.untoggled {
+    top: -90px;
+}
+
+nav .menu .arrowBlock.toggled {
+    top: 0;
+}
+
+nav .menu i {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+nav .menu i::before {
+    text-align: center;
+    font-size: 90px;
+    position: relative;
+    width: 100%;
+}
+
+nav .list {
+    height: 0;
+    position: relative;
+}
+
+nav .list.toggled {
+    visibility: visible;
+}
+
+nav .list.untoggled {
+    visibility: hidden;
+}
+
+nav .menu ul {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 10px;
+    font-size: 24px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto-fill, auto);
+    background-color: var(--color-shade-i1);
+}
+
+nav .menu li {
+    display: grid;
+    border-top: solid 1px var(--color-shade-i2);
+}
+
+nav .menu li a {
+    padding: 15px 0;
+    color: var(--color-shade-i5);
+    text-decoration: none;
+}
+
+main {
+    margin-top: var(--len-nav-outer0);
+    height: 2000px;
+    background-color: var(--color-shade-i2);
+}
+main p{
+    font-size: 30px;
+}
+
+@media screen and (min-width: 1000px) {
+    nav .title {
+        grid-column: 1;
+        border-right: 0;
+    }
+
+    nav .menu .arrow {
+        visibility: collapse;
+    }
+
+    nav .menu .list {
+        visibility: visible;
+        height: 100%;
+        position: relative;
+        top: -90px;
+    }
+
+    nav .menu ul {
+        list-style: none;
+        position: relative;
+        margin: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+        top: 10px;
+        font-size: 24px;
+        grid-template-columns: repeat(auto-fill, minmax(0,20%));
+        grid-template-rows: var(--len-nav-content0);
+    }
+
+    nav .menu li {
+        width: auto;
+        border-top: 0;
+        border-left: solid 1px var(--color-shade-i2);
+        border-bottom: solid 2px var(--color-shade-i2);
+    }
+
+    nav .menu li:hover {
+        transition-duration: 0.3s;
+        border-left: solid 2px var(--color-shade-i6);
+        border-bottom: solid 2px var(--color-shade-i6);
+    }
+
+    nav .menu li a {
+        padding: 10px 0;
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+    main p {
+        font-size: 20px;
+    }
+}

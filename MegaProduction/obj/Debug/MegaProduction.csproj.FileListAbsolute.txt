@@ -1,0 +1,15 @@
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\bin\Debug\MegaProduction.exe.config
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\bin\Debug\MegaProduction.exe
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\bin\Debug\MegaProduction.pdb
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProduction.csprojAssemblyReference.cache
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MainWindow.g.cs
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\App.g.cs
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProduction_MarkupCompile.cache
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProduction_MarkupCompile.lref
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MainWindow.baml
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProduction.g.resources
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProduction.Properties.Resources.resources
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProduction.csproj.GenerateResource.cache
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProduction.csproj.CoreCompileInputs.cache
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProduction.exe
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProduction.pdb
