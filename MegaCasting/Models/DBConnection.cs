@@ -26,8 +26,6 @@ namespace MegaCasting.Models
         /// nom de la base de donnée
         /// </summary>
         private String dbn;
-
-
         #endregion
 
         #region private mothod

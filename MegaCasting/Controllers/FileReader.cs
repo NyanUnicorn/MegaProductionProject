@@ -1,4 +1,5 @@
 ﻿using MegaCasting.Models;
+using MegaCasting.Repositories;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,30 +14,23 @@ namespace MegaCasting.Controllers
         /// <summary>
         /// position relatif du fichier de cofiguration de connection
         /// </summary>
-        private String connectionConf = @"..\Conf\connection.conf";
-        /// <summary>
-        /// la connection à la base de donnée tant qu'utilisateur léger
-        /// </summary>
-        private DBConnection lightSqlConnection;
+        private static String connectionConf = @"..\Conf\lightConnection.conf";
 
         #endregion
+
         #region public parameters
-        /// <summary>
-        /// Permet de récupérer la connection a la base de donné Légère
-        /// </summary>
-        public DBConnection LightSqlConnection { get => lightSqlConnection; }
-
         #endregion
 
-        #region functions
+        #region public methods
 
         /// <summary>
-        /// Lie le ficier cofig de connection àla base de donnée et modifie la connexion sql
+        /// Lie le ficier config de connection à la base de donnée et modifie la connexion sql
         /// </summary>
-        public void ReadSQLConnection()
+        public static void ReadLightConnection()
         {
+            DBConnection lightSqlConnection = new DBConnection();
             //SQLConnection sqlconnection = new SQLConnection();
-            StreamReader reader = new StreamReader("C:\\Users\\phill\\source\\repos\\TeamSpace\\TeamSpace\\Config\\config.txt");
+            StreamReader reader = new StreamReader(connectionConf);
 
 
             while (!reader.EndOfStream)
@@ -46,40 +40,30 @@ namespace MegaCasting.Controllers
                 switch (values[0])
                 {
                     case "UID":
-                        this.LightSqlConnection.Uid = values[1];
+                        lightSqlConnection.Uid = values[1];
                         break;
                     case "PWD":
-                        this.LightSqlConnection.Pwd = values[1];
+                        lightSqlConnection.Pwd = values[1];
                         break;
                     case "SRV":
-                        this.LightSqlConnection.Srv = values[1];
+                        lightSqlConnection.Srv = values[1];
                         break;
                     case "DNB":
-                        this.LightSqlConnection.Dbn = values[1];
+                        lightSqlConnection.Dbn = values[1];
                         break;
                     default:
                         break;
 
                 }
             }
+            lightSqlConnection.Uid = "MegaCastingLightUser";
+            lightSqlConnection.Pwd = "P@$$w0rd";
+            lightSqlConnection.Srv = "UX310UNICORNPC\\SQLEXPRESS";
+            lightSqlConnection.Dbn = "MegaCasting";
+            Repository.LUConnexion = lightSqlConnection;
         }
-
-
-
         #endregion
 
-
-        #region constructors
-        public FileReader()
-        {
-            //ReadSQLConnection();
-            this.LightSqlConnection.Uid = "MegaCastingLightUser";
-            this.LightSqlConnection.Pwd = "P@$$w0rd";
-            this.LightSqlConnection.Srv = "UX310UNICORNPC\\SQLEXPRESS";
-            this.LightSqlConnection.Dbn = "MegaCasting";
-        }
-
-        #endregion
 
     }
 }
