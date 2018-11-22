@@ -13,3 +13,11 @@ D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProdu
 D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProduction.csproj.CoreCompileInputs.cache
 D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProduction.exe
 D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\MegaProduction.pdb
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\AppWindow.g.cs
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCClientManager.g.cs
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCOfferManager.g.cs
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\AppWindow.baml
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCClientManager.baml
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCOfferManager.baml
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\ListTemplates\ClientListBxItem.g.cs
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\ListTemplates\ClientListBxItem.baml

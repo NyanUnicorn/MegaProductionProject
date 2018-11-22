@@ -14,7 +14,7 @@ namespace MegaCasting.Controllers
         /// <summary>
         /// position relatif du fichier de cofiguration de connection
         /// </summary>
-        private static String connectionConf = @"..\Conf\lightConnection.conf";
+        private static String connectionConf = @"Conf\lightConnection.conf";
 
         #endregion
 
@@ -56,10 +56,12 @@ namespace MegaCasting.Controllers
 
                 }
             }
+            /*
             lightSqlConnection.Uid = "MegaCastingLightUser";
             lightSqlConnection.Pwd = "P@$$w0rd";
             lightSqlConnection.Srv = "UX310UNICORNPC\\SQLEXPRESS";
             lightSqlConnection.Dbn = "MegaCasting";
+            */
             Repository.LUConnexion = lightSqlConnection;
         }
         #endregion

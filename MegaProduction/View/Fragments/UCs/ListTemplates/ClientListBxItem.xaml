@@ -1,0 +1,17 @@
+﻿<UserControl x:Name="ClientListBxItem0" x:Class="MegaProduction.View.Fragments.UCs.ListTemplates.ClientListBxItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MegaProduction.View.Fragments.UCs.ListTemplates"
+             mc:Ignorable="d" Height="67" Width="359" Background="#FF3F3F46" MouseDoubleClick="ClientListBxItem0_MouseDoubleClick">
+    <Grid Margin="0,0,29,339.6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="LblName" Content="Label" Height="30" Margin="11,5,15.2,-35" VerticalAlignment="Top" FontSize="20" Foreground="#FFCCFFC2"/>
+        <Label x:Name="LblCity" Content="Label" Height="30" Margin="11,35,15.2,-65" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
+
+    </Grid>
+</UserControl>
