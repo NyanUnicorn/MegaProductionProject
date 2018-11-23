@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace MegaProduction.Model.Structure.Connections
+namespace MegaProduction.Model.Tools.Connections
 {
     public class DBConnection
     {

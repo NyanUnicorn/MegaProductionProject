@@ -23,13 +23,23 @@ namespace MegaProduction.View.Fragments.UCs
     /// </summary>
     public partial class UCClientManager : UserControl
     {
+        #region private field
         /// <summary>
-        /// TODO : add comments
+        /// Liste de clients
         /// </summary>
         private List<MGClient> clientList;
+        #endregion
 
+        #region internal field
         internal List<MGClient> ClientList { get => clientList; set => clientList = value; }
+        #endregion
 
+
+
+        #region private method
+        /// <summary>
+        /// Remplie la listeBox avec les clients stoqué dans la liste de client
+        /// </summary>
         private void fillList()
         {
             foreach (MGClient client in this.clientList)
@@ -38,30 +48,40 @@ namespace MegaProduction.View.Fragments.UCs
                 clientItem.LblName.Content = client.Name;
                 clientItem.LblCity.Content = client.City;
                 ListBxClients0.Items.Add(clientItem);
-                /*
-                clientItem = new ClientListBxItem(this, this.clientList.IndexOf(client));
-                clientItem.LblName.Content = client.Name;
-                clientItem.LblCity.Content = client.City;
-                ListBxClients0.Items.Add(clientItem);
-                */
             }
         }
 
+        #endregion
 
+        #region contructor
         public UCClientManager()
         {
             InitializeComponent();
             this.clientList = ClientRep.GetClients();
             UserControl uc = new UserControl();
-            //WrapPnlClients0
             fillList();
             ListBxClients0.Items.Add(uc);
         }
+        #endregion
 
+        #region event
+        /// <summary>
+        /// Met a jour la liste avec des donné filtré en fonction de la chaine dans la textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBxSearchClient_TextChanged(object sender, TextChangedEventArgs e)
-        {
+        {/*
+            if(TxtBxSearchClient.Text.Length > 3)
+            {
 
+                this.clientList.Clear();
+                this.clientList = ClientRep.GetClients();
+                this.fillList();
+            }
+            */
         }
+        #endregion
 
     }
 }

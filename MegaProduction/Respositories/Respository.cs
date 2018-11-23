@@ -1,4 +1,4 @@
-﻿using MegaProduction.Model.Structure.Connections;
+﻿using MegaProduction.Model.Tools.Connections;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,7 +9,7 @@ namespace MegaProduction.Respositories
 {
     public abstract class Repository
     {
-        #region field
+        #region private field
         /// <summary>
         /// "light user connection" connexion d'utilisateur de client léger
         /// </summary>
@@ -22,7 +22,7 @@ namespace MegaProduction.Respositories
         /// <summary>
         /// Permet de récupérer et de modifier la connexion d'utilisateur de client léger
         /// </summary>
-        public static DBConnection LUConnexion { get => hUConnexion; set => hUConnexion = value; }
+        public static DBConnection HUConnexion { get => hUConnexion; set => hUConnexion = value; }
         /// <summary>
         /// Permet de récupérer la chaine de connexion à la base de donnée d'utilisateur du client léger
         /// </summary>

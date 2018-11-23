@@ -1,4 +1,4 @@
-﻿using MegaProduction.Model.Structure.Connections;
+﻿using MegaProduction.Model.Tools.Connections;
 using MegaProduction.Respositories;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace MegaCasting.Controllers
         #region public methods
 
         /// <summary>
-        /// Lie le ficier config de connection à la base de donnée et modifie la connexion sql
+        /// Lie le ficier config de connection à la base de donnée et met à jour la connexion sql
         /// </summary>
         public static void ReadHeavyConnection()
         {
@@ -56,13 +56,7 @@ namespace MegaCasting.Controllers
 
                 }
             }
-            /*
-            lightSqlConnection.Uid = "MegaCastingLightUser";
-            lightSqlConnection.Pwd = "P@$$w0rd";
-            lightSqlConnection.Srv = "UX310UNICORNPC\\SQLEXPRESS";
-            lightSqlConnection.Dbn = "MegaCasting";
-            */
-            Repository.LUConnexion = lightSqlConnection;
+            Repository.HUConnexion = lightSqlConnection;
         }
         #endregion
 

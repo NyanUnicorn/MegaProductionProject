@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon0_128.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -55,11 +58,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\MGProduction\MGClient.cs" />
-    <Compile Include="Model\Structure\Connections\DBConnection.cs" />
+    <Compile Include="Model\Tools\Connections\DBConnection.cs" />
     <Compile Include="Model\Structure\Tabs\ClientManagerTab.cs" />
+    <Compile Include="Model\Structure\Tabs\HeavyUserManagerTab.cs" />
     <Compile Include="Model\Structure\Tabs\OfferManagerTab.cs" />
     <Compile Include="Model\Structure\Tabs\ITab.cs" />
+    <Compile Include="Model\Structure\Tabs\PartnerManagerTab.cs" />
     <Compile Include="Model\Structure\Tabs\Tab.cs" />
+    <Compile Include="Model\Structure\Tabs\WebsiteManagerTab.cs" />
+    <Compile Include="Model\Structure\Tabs\WelcomeTab.cs" />
     <Compile Include="Model\Tools\FileReader.cs" />
     <Compile Include="Respositories\MGProduction\ClientRep.cs" />
     <Compile Include="Respositories\Respository.cs" />
@@ -74,6 +81,9 @@
     </Compile>
     <Compile Include="View\Fragments\UCs\UCOfferManager.xaml.cs">
       <DependentUpon>UCOfferManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Fragments\UCs\UCPartnerManager.xaml.cs">
+      <DependentUpon>UCPartnerManager.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -101,6 +111,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Fragments\UCs\UCOfferManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Fragments\UCs\UCPartnerManager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,6 +148,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="View\Styles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon0_128_wJR_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon0_128.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

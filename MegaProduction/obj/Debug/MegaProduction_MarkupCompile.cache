@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Documents\VSprojects\MegaProductionProject\MegaProduction\App.xaml
-5-183020866
+6-1833589344
 
-19-13185180
+24-1564220361
 131569487696
-MainWindow.xaml;View\AppWindow.xaml;View\Fragments\UCs\ListTemplates\ClientListBxItem.xaml;View\Fragments\UCs\UCClientManager.xaml;View\Fragments\UCs\UCOfferManager.xaml;
+MainWindow.xaml;View\AppWindow.xaml;View\Fragments\UCs\ListTemplates\ClientListBxItem.xaml;View\Fragments\UCs\UCClientManager.xaml;View\Fragments\UCs\UCOfferManager.xaml;View\Fragments\UCs\UCPartnerManager.xaml;
 
 False
 

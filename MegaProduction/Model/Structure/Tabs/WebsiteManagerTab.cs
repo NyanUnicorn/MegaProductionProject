@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace MegaProduction.Model.Tools.Tabs
 {
-    class OfferManagerTab : Tab
+    class WebsiteManagerTab : Tab
     {
         /// <summary>
-        /// Onglet de gestion des offres
+        /// Onglet de gestion du contenue du site web
         /// </summary>
-        public OfferManagerTab() : base("manageOffer")
+        public WebsiteManagerTab() : base("manageWabsite")
         {
-            TabElement.Content = new UCOfferManager();
-            TabElement.Header = "Gestion des Offres";
+            TabElement.Content = new UCPartnerManager();
+            TabElement.Header = "Gestion du Site Web";
         }
     }
 }

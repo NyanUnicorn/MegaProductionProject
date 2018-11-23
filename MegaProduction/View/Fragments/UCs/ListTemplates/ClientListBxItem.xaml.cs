@@ -40,7 +40,13 @@ namespace MegaProduction.View.Fragments.UCs.ListTemplates
         {
 
             this.parent.TxtBxClientName.Text = parent.ClientList.ElementAt(this.index).Name;
-            this.parent.TxtBxCountry.Text = this.index.ToString();
-         }
+            this.parent.TxtBxTelNumContact.Text = parent.ClientList.ElementAt(this.index).TelContact;
+            this.parent.TxtBxTelApplication.Text = parent.ClientList.ElementAt(this.index).TelMGProd;
+            this.parent.TxtBxStreet.Text = parent.ClientList.ElementAt(this.index).Street;
+            this.parent.TxtBxCity.Text = parent.ClientList.ElementAt(this.index).City;
+            this.parent.TxtBxRegion.Text = parent.ClientList.ElementAt(this.index).Region;
+            this.parent.TxtBxPC.Text = parent.ClientList.ElementAt(this.index).PCode;
+            this.parent.TxtBxCountry.Text = parent.ClientList.ElementAt(this.index).Country;
+        }
     }
 }

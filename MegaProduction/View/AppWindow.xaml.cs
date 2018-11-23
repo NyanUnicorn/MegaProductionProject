@@ -1,6 +1,7 @@
 ﻿using MegaCasting.Controllers;
 using MegaProduction.Model;
-using MegaProduction.Model.Structure.Tabs;
+using MegaProduction.Model.Tools.Tabs;
+using MegaProduction.Respositories;
 using MegaProduction.View.Fragments.UCs;
 using System;
 using System.Collections.Generic;
@@ -33,18 +34,37 @@ namespace MegaProduction.View
         #endregion
 
         #region private method
+        /// <summary>
+        /// Charge les pages et les onglets
+        /// </summary>
         private void loadTabs()
         {
             tabList = new List<ITab>();
             ITab tabpage;
+            tabpage = new WelcomeTab();
+            this.AppTabControl0.Items.Add(tabpage.TabElement);
             tabpage = new OfferManagerTab();
             this.AppTabControl0.Items.Add(tabpage.TabElement);
             tabpage = new ClientManagerTab();
+            this.AppTabControl0.Items.Add(tabpage.TabElement);
+            tabpage = new PartnerManagerTab();
+            this.AppTabControl0.Items.Add(tabpage.TabElement);
+            tabpage = new WebsiteManagerTab();
+            this.AppTabControl0.Items.Add(tabpage.TabElement);
+            tabpage = new HeavyUserManagerTab();
             this.AppTabControl0.Items.Add(tabpage.TabElement);
             if (isAdmin)
             {
 
             }
+
+        }
+        /// <summary>
+        /// Charge des éléments additionnel de la page
+        /// </summary>
+        private void loadFeatures()
+        {
+            this.ConnectedDatabaseStatus0.Content = Repository.HUConnexion.Srv + @"\" + Repository.HUConnexion.Dbn;
 
         }
         #endregion
@@ -58,6 +78,7 @@ namespace MegaProduction.View
             InitializeComponent();
             FileReader.ReadHeavyConnection();
             loadTabs();
+            loadFeatures();
         }
         #endregion
 
