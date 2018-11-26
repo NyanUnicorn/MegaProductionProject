@@ -58,6 +58,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\MGProduction\MGClient.cs" />
+    <Compile Include="Model\Structure\Tabs\WebViewerTabs\IndexWebtab.cs" />
+    <Compile Include="Model\Structure\Tabs\WebViewerTabs\WebTab.cs" />
     <Compile Include="Model\Tools\Connections\DBConnection.cs" />
     <Compile Include="Model\Structure\Tabs\ClientManagerTab.cs" />
     <Compile Include="Model\Structure\Tabs\HeavyUserManagerTab.cs" />
@@ -84,6 +86,21 @@
     </Compile>
     <Compile Include="View\Fragments\UCs\UCPartnerManager.xaml.cs">
       <DependentUpon>UCPartnerManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Fragments\UCs\UCWebManFragments\Pages\ChooseElementContentType.xaml.cs">
+      <DependentUpon>ChooseElementContentType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Fragments\UCs\UCWebManFragments\Pages\PageContentHolder.xaml.cs">
+      <DependentUpon>PageContentHolder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Fragments\UCs\UCWebManFragments\Pages\Offers.xaml.cs">
+      <DependentUpon>Offers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Fragments\UCs\UCWebManFragments\Pages\PageElement.xaml.cs">
+      <DependentUpon>PageElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Fragments\UCs\UCWebsiteManager.xaml.cs">
+      <DependentUpon>UCWebsiteManager.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -118,6 +135,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Fragments\UCs\UCWebManFragments\Pages\ChooseElementContentType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Fragments\UCs\UCWebManFragments\Pages\PageContentHolder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Fragments\UCs\UCWebManFragments\Pages\Offers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Fragments\UCs\UCWebManFragments\Pages\PageElement.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Fragments\UCs\UCWebsiteManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -147,7 +184,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
     <Folder Include="View\Styles\" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +191,25 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icon0_128.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\jobofferImg0-200.png" />
+    <Resource Include="Images\paraImg0-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\closeImg0-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addImg0-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\saveImg0-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addImg0h-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\saveImg0h-200.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

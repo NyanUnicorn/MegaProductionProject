@@ -23,4 +23,14 @@ D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Frag
 D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\ListTemplates\ClientListBxItem.baml
 D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCPartnerManager.g.cs
 D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCPartnerManager.baml
-D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCWebManFragments\Pages\Offers.g.cs
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCWebsiteManager.g.cs
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCWebManFragments\Pages\Offers.baml
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCWebsiteManager.baml
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCWebManFragments\Pages\PageElement.g.cs
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCWebManFragments\Pages\PageElement.baml
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCWebManFragments\Pages\ChooseElementContentType.g.cs
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\App.baml
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCWebManFragments\Pages\ChooseElementContentType.baml
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCWebManFragments\Pages\PageContentHolder.g.cs
+D:\Documents\VSprojects\MegaProductionProject\MegaProduction\obj\Debug\View\Fragments\UCs\UCWebManFragments\Pages\PageContentHolder.baml

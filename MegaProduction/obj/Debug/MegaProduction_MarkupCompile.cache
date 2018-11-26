@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Documents\VSprojects\MegaProductionProject\MegaProduction\App.xaml
-6-1833589344
+11-1779336426
 
-24-1564220361
+311346301800
 131569487696
-MainWindow.xaml;View\AppWindow.xaml;View\Fragments\UCs\ListTemplates\ClientListBxItem.xaml;View\Fragments\UCs\UCClientManager.xaml;View\Fragments\UCs\UCOfferManager.xaml;View\Fragments\UCs\UCPartnerManager.xaml;
+MainWindow.xaml;View\AppWindow.xaml;View\Fragments\UCs\ListTemplates\ClientListBxItem.xaml;View\Fragments\UCs\UCClientManager.xaml;View\Fragments\UCs\UCOfferManager.xaml;View\Fragments\UCs\UCPartnerManager.xaml;View\Fragments\UCs\UCWebManFragments\Pages\ChooseElementContentType.xaml;View\Fragments\UCs\UCWebManFragments\Pages\PageContentHolder.xaml;View\Fragments\UCs\UCWebManFragments\Pages\Offers.xaml;View\Fragments\UCs\UCWebManFragments\Pages\PageElement.xaml;View\Fragments\UCs\UCWebsiteManager.xaml;
 
 False
 

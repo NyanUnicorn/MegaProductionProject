@@ -14,7 +14,7 @@ namespace MegaProduction.Model.Tools.Tabs
         /// </summary>
         public WebsiteManagerTab() : base("manageWabsite")
         {
-            TabElement.Content = new UCPartnerManager();
+            TabElement.Content = new UCWebsiteManager();
             TabElement.Header = "Gestion du Site Web";
         }
     }

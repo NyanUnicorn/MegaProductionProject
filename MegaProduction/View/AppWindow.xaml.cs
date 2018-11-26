@@ -25,7 +25,13 @@ namespace MegaProduction.View
 
 
         #region private field
+        /// <summary>
+        /// Liste d'onglet dans la fenêtre principale
+        /// </summary>
         List<ITab> tabList;
+        /// <summary>
+        /// Status, vrai si l'utilisateur est administrateur/manager, faux si non.
+        /// </summary>
         private bool isAdmin = true;
         #endregion
 
@@ -48,14 +54,13 @@ namespace MegaProduction.View
             tabpage = new ClientManagerTab();
             this.AppTabControl0.Items.Add(tabpage.TabElement);
             tabpage = new PartnerManagerTab();
-            this.AppTabControl0.Items.Add(tabpage.TabElement);
-            tabpage = new WebsiteManagerTab();
-            this.AppTabControl0.Items.Add(tabpage.TabElement);
-            tabpage = new HeavyUserManagerTab();
-            this.AppTabControl0.Items.Add(tabpage.TabElement);
+            this.AppTabControl0.Items.Add(tabpage.TabElement);            
             if (isAdmin)
             {
-
+                tabpage = new WebsiteManagerTab();
+                this.AppTabControl0.Items.Add(tabpage.TabElement);
+                tabpage = new HeavyUserManagerTab();
+                this.AppTabControl0.Items.Add(tabpage.TabElement);
             }
 
         }

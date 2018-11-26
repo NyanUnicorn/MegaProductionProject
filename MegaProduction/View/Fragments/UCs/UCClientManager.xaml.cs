@@ -71,7 +71,7 @@ namespace MegaProduction.View.Fragments.UCs
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void TxtBxSearchClient_TextChanged(object sender, TextChangedEventArgs e)
-        {/*
+        {
             if(TxtBxSearchClient.Text.Length > 3)
             {
 
@@ -79,7 +79,7 @@ namespace MegaProduction.View.Fragments.UCs
                 this.clientList = ClientRep.GetClients();
                 this.fillList();
             }
-            */
+            
         }
         #endregion
 

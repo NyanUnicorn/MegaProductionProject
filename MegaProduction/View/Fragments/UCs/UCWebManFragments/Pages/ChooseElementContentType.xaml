@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="MegaProduction.View.Fragments.UCs.UCWebManFragments.Pages.ChooseElementContentType"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MegaProduction.View.Fragments.UCs.UCWebManFragments.Pages"
+             mc:Ignorable="d" Height="60.019" Width="151.456" HorizontalAlignment="Left" VerticalAlignment="Top" LostFocus="UserControl_LostFocus">
+    <Grid x:Name="GridBase" Background="#1976923C" >
+        <Image Source="{StaticResource ParagraphImage200}" x:Name="ImgParagrph" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.103,-0.117" MouseLeftButtonUp="ImgParagrph_MouseLeftButtonUp"/>
+        <Image Source="{StaticResource JobOfferImage200}" x:Name="ImgOffers" HorizontalAlignment="Left" Height="40" Margin="55,10,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.103,-0.117" MouseLeftButtonUp="ImgOffers_MouseLeftButtonUp"/>
+        <Image Source="{StaticResource DeleteImage200}" x:Name="ImgDelete" HorizontalAlignment="Left" Height="40" Margin="100,10,0,0" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.103,-0.117" MouseLeftButtonUp="ImgClose_MouseLeftButtonUp"/>
+
+    </Grid>
+</UserControl>
