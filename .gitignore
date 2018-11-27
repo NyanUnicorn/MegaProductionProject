@@ -411,3 +411,7 @@ ASALocalRun/
 
 #connection to database
 databaseconnection.conf
+
+Debug/
+Debug/*
+*.exe
