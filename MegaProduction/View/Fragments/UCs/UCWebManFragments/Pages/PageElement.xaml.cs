@@ -21,7 +21,7 @@ namespace MegaProduction.View.Fragments.UCs.UCWebManFragments.Pages
     public partial class PageElement : UserControl
     {
         #region enum
-        public enum ContentType {Undecided, Paragraph, OfferList };
+        public enum ElementType {Undecided, Paragraph, OfferList };
         #endregion
 
         #region private field
@@ -45,29 +45,64 @@ namespace MegaProduction.View.Fragments.UCs.UCWebManFragments.Pages
         /// Si l'élément est éditable ou non
         /// </summary>
         private bool editable = false;
+        /// <summary>
+        /// Libelle du titre
+        /// </summary>
         private Label lblTitle;
+        /// <summary>
+        /// TexteBox du titre (pour l'édition)
+        /// </summary>
         private TextBox txtTitle;
+        /// <summary>
+        /// TextBox du paragraph (our les deux situation, mois d'importance avec la présentation)
+        /// </summary>
         private TextBox txtPara;
+        /// <summary>
+        /// Control utilisateur pour le choix de l'utilisateur
+        /// </summary>
         private ChooseElementContentType ContentChoice;
-        private ContentType contentType;
+        /// <summary>
+        /// Type de contenue
+        /// </summary>
+        private ElementType contentType;
+        #endregion
 
-
-
-        public ContentType ContentType1 { get => contentType; set => contentType = value; }
+        #region public field
+        /// <summary>
+        /// Permet de récupérer et de modifier le type de contenue.
+        /// </summary>
+        public ElementType ContentType { get => contentType; set => contentType = value; }
+        /// <summary>
+        /// Permet de récupérer et de modifier la booléenne d'éditabilité
+        /// </summary>
         public bool Editable { get => editable; set => editable = value; }
+        /// <summary>
+        /// Permet de récupérer et de modifier le libelle du titre
+        /// </summary>
         public Label LblTitle { get => lblTitle; set => lblTitle = value; }
+        /// <summary>
+        /// Permet de récupérer et de modifier la texteBox du titre.
+        /// </summary>
         public TextBox TxtTitle { get => txtTitle; set => txtTitle = value; }
+        /// <summary>
+        /// Permet de récupérer et de modifier La textBox du paragraphe.
+        /// </summary>
         public TextBox TxtPara { get => txtPara; set => txtPara = value; }
+        /// <summary>
+        /// Permet de récupérer et de modifier le titre.
+        /// </summary>
         public string Title { get => title; set => title = value; }
-
-
         #endregion
 
         #region private method
-        public void SetContentType(ContentType _t)
+        /// <summary>
+        /// Permet de changer le type de contenue
+        /// </summary>
+        /// <param name="_t"></param>
+        public void SetContentType(ElementType _t)
         {
-            this.ContentType1 = _t;
-            if (this.ContentType1 == ContentType.Paragraph)
+            this.ContentType = _t;
+            if (this.ContentType == ElementType.Paragraph)
             {
                 this.GridContent.Children.Clear();
                 TxtPara = new TextBox();
@@ -80,30 +115,13 @@ namespace MegaProduction.View.Fragments.UCs.UCWebManFragments.Pages
                 this.GridContent.Children.Add(TxtPara);
             }
         }
+        /// <summary>
+        /// Ferme l'option de choix et lance la sauvegarde
+        /// </summary>
         public void CloseChoice()
         {
             parent.Save();
         }
-        #endregion
-
-        
-        public void SetContentReadOnly()
-        {
-            TxtPara.IsReadOnly = true;
-        }
-
-
-
-
-        /// <summary>
-        /// Supprimer cette élément. Demander au parent d'être supprimé.
-        /// </summary>
-        public void DeleteThis()
-        {
-            parent.deleteContent(this);
-            
-        }
-
         /// <summary>
         /// Rend le contenaire étitable
         /// </summary>
@@ -116,38 +134,55 @@ namespace MegaProduction.View.Fragments.UCs.UCWebManFragments.Pages
             TxtTitle.Text = this.Title;
             this.GridLabel.Children.Add(TxtTitle);
             //ToDo : set characteristics for textboxes
-            if (ContentType1 == ContentType.Paragraph)
+            if (ContentType == ElementType.Paragraph)
             {
                 this.GridContent.Children.Clear();
                 TxtPara.IsReadOnly = false;
                 this.GridContent.Children.Add(TxtPara);
             }
-            else if(ContentType1 == ContentType.OfferList)
+            else if (ContentType == ElementType.OfferList)
             {
-                
+
             }
             else
             {
-                
+
             }
         }
-        
         /// <summary>
         /// Permet de changer d'atat entre éditable ou non.
         /// </summary>
         private void switchState()
         {
-            if (Editable)
+            if (!Editable)
             {
-                this.edit();   
+                this.edit();
             }
             else
             {
                 parent.Save();
             }
         }
+        #endregion
 
+        #region public method
+        /// <summary>
+        /// Rend l'élément en lisible seulement.
+        /// </summary>
+        public void SetContentReadOnly()
+        {
+            TxtPara.IsReadOnly = true;
+        }
+        /// <summary>
+        /// Supprimer cette élément. Demander au parent d'être supprimé.
+        /// </summary>
+        public void DeleteThis()
+        {
+            parent.deleteContent(this);
 
+        }
+
+        #endregion
 
         #region contructor
         public PageElement()
@@ -179,6 +214,18 @@ namespace MegaProduction.View.Fragments.UCs.UCWebManFragments.Pages
             this.LblTitle = new Label();
             this.Title = _label;
             this.contentObj = _content;
+        }
+        #endregion
+
+        #region event
+        /// <summary>
+        /// Changer d'état de l'élément quand double cliqué.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UserControl_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            switchState();
         }
         #endregion
 

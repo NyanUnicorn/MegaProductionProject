@@ -40,6 +40,8 @@ namespace MegaProduction.View.Fragments.UCs
             WebTab tabpage;
             tabpage = new IndexWebtab();
             this.TabCtrlWebview.Items.Add(tabpage.TabElement);
+            tabpage = new OffersWebTab();
+            this.TabCtrlWebview.Items.Add(tabpage.TabElement);
 
         }
 

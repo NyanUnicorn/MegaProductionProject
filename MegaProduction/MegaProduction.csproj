@@ -59,6 +59,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\MGProduction\MGClient.cs" />
     <Compile Include="Model\Structure\Tabs\WebViewerTabs\IndexWebtab.cs" />
+    <Compile Include="Model\Structure\Tabs\WebViewerTabs\OffersWebTab.cs" />
     <Compile Include="Model\Structure\Tabs\WebViewerTabs\WebTab.cs" />
     <Compile Include="Model\Tools\Connections\DBConnection.cs" />
     <Compile Include="Model\Structure\Tabs\ClientManagerTab.cs" />
@@ -210,6 +211,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\saveImg0h-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\closeImg0h-200.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

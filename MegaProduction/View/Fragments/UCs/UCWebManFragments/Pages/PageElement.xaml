@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MegaProduction.View.Fragments.UCs.UCWebManFragments.Pages"
-             mc:Ignorable="d" Height="257.978" Width="879.897">
-    <Grid Margin="0,0,0,0">
+             mc:Ignorable="d" Height="257.978" Width="879.897" MouseDoubleClick="UserControl_MouseDoubleClick">
+    <Grid x:Name="GridCont" Margin="0,0,0,0">
         <Grid x:Name="GridLabel" Height="50" Margin="0,0,0,0" VerticalAlignment="Top" Width="880" HorizontalAlignment="Left"/>
         <Grid x:Name="GridContent" Margin="0,50,0,0"/>
 

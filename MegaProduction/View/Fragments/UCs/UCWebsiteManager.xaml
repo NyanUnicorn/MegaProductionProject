@@ -7,14 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="451.6" d:DesignWidth="800">
     <Grid Background="#FF6C6D6B">
-        <TabControl x:Name="TabCtrlWebview" Margin="0,0,0,0.2" Background="#FF6C6D6B">
-            <TabItem Header="TabItem">
-                <Grid Background="#FF6C6D6B"/>
-            </TabItem>
-            <TabItem Header="IndexTest">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-        </TabControl>
+        <TabControl x:Name="TabCtrlWebview" Margin="0,0,0,0.2" Background="#FF6C6D6B"/>
+
+
 
     </Grid>
 </UserControl>

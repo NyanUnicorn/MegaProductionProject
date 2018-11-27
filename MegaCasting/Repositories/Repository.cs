@@ -16,8 +16,6 @@ namespace MegaCasting.Repositories
         private static DBConnection lUConnexion;
         #endregion
 
-
-
         #region public field
         /// <summary>
         /// Permet de récupérer et de modifier la connexion d'utilisateur de client léger
@@ -28,7 +26,6 @@ namespace MegaCasting.Repositories
         /// </summary>
         public static string LUDBcononnectionString => produceConnectionString(lUConnexion);
         #endregion
-
 
         #region public method
         /// <summary>
@@ -41,11 +38,6 @@ namespace MegaCasting.Repositories
             return "Server=" + _dbconnection.Srv + ";Database=" + _dbconnection.Dbn + ";userid=" + _dbconnection.Uid + ";password=" + _dbconnection.Pwd + ";Trusted_Connection=True";
         }
         #endregion
-
-        #region public method
-
-        #endregion
-
 
     }
 

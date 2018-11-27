@@ -21,8 +21,10 @@ namespace MegaProduction.View.Fragments.UCs.ListTemplates
     /// </summary>
     public partial class ClientListBxItem : UserControl
     {
+        #region private field
         private UCClientManager parent;
         private int index;
+        #endregion
 
         public ClientListBxItem(UCClientManager _clientManager, int _index)
         {
@@ -36,6 +38,12 @@ namespace MegaProduction.View.Fragments.UCs.ListTemplates
             InitializeComponent();
         }
 
+        #region event
+        /// <summary>
+        /// Evenement, quand l'item est double cliqué, ses informations sont affiché
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClientListBxItem0_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
 
@@ -48,5 +56,7 @@ namespace MegaProduction.View.Fragments.UCs.ListTemplates
             this.parent.TxtBxPC.Text = parent.ClientList.ElementAt(this.index).PCode;
             this.parent.TxtBxCountry.Text = parent.ClientList.ElementAt(this.index).Country;
         }
+        #endregion
+
     }
 }

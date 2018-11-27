@@ -52,12 +52,12 @@ namespace MegaProduction.View.Fragments.UCs.UCWebManFragments.Pages
 
         private void ImgOffers_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            parent.SetContentType(PageElement.ContentType.OfferList);
+            parent.SetContentType(PageElement.ElementType.OfferList);
         }
 
         private void ImgParagrph_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            parent.SetContentType(PageElement.ContentType.Paragraph);
+            parent.SetContentType(PageElement.ElementType.Paragraph);
         }
 
         private void UserControl_LostFocus(object sender, RoutedEventArgs e)

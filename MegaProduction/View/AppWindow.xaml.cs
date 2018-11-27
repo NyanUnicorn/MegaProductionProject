@@ -50,8 +50,8 @@ namespace MegaProduction.View
             tabpage = new WelcomeTab();
             this.AppTabControl0.Items.Add(tabpage.TabElement);
             tabpage = new OfferManagerTab();
-            this.AppTabControl0.Items.Add(tabpage.TabElement);
-            tabpage = new ClientManagerTab();
+            /*this.AppTabControl0.Items.Add(tabpage.TabElement);
+            tabpage = new ClientManagerTab();*/
             this.AppTabControl0.Items.Add(tabpage.TabElement);
             tabpage = new PartnerManagerTab();
             this.AppTabControl0.Items.Add(tabpage.TabElement);            

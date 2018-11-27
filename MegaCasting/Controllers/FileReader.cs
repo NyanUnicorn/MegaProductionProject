@@ -14,7 +14,7 @@ namespace MegaCasting.Controllers
         /// <summary>
         /// position relatif du fichier de cofiguration de connection
         /// </summary>
-        private static String connectionConf = @"Conf\lightConnection.conf";
+        private static String connectionConf = @"Conf\databaseconnection.conf";
 
         #endregion
 

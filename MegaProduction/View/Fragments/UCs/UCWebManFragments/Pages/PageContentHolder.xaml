@@ -9,7 +9,9 @@
     <Grid Background="#FF6b6b6b">
         <Image Source="{StaticResource AddImage200}" x:Name="ImgAddContent" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" MouseLeftButtonUp="ImgAddContent_MouseLeftButtonUp" MouseEnter="ImgAddContent_MouseEnter" MouseLeave="ImgAddContent_MouseLeave"/>
         <Image Source="{StaticResource SaveImage200}" x:Name="ImgSaveContent" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" MouseLeftButtonUp="ImgSaveContent_MouseLeftButtonUp" Margin="0,50,0,0" MouseEnter="ImgSaveContent_MouseEnter" MouseLeave="ImgSaveContent_MouseLeave"/>
+        <Image Source="{StaticResource DeleteImage200}" x:Name="ImgDelContent" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Margin="0,100,0,0" MouseEnter="ImgDelContent_MouseEnter" MouseLeave="ImgDelContent_MouseLeave" MouseLeftButtonUp="ImgDelContent_MouseLeftButtonUp"/>
         <ListBox x:Name="ScrlVContentHolder" Margin="50,0,0,0" Background="#FFE5E5E5" ScrollViewer.CanContentScroll="False"/>
+       
 
     </Grid>
 </UserControl>
