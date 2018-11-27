@@ -1,39 +1,22 @@
-###################
-# compiled source #
-###################
+#Ignore
+
+#compiled code
 *.com
 *.class
 *.dll
-*.exe
+#*.exe
 *.pdb
 *.dll.config
 *.cache
 *.suo
-# Include dlls if they’re in the NuGet packages directory
-!/packages/*/lib/*.dll
-!/packages/*/lib/*/*.dll
-# Include dlls if they're in the CommonReferences directory
-!*CommonReferences/*.dll
-####################
-# VS Upgrade stuff #
-####################
-UpgradeLog.XML
-_UpgradeReport_Files/
 ###############
 # Directories #
 ###############
 bin/
 obj/
 TestResults/
-###################
-# Web publish log #
-###################
-*.Publish.xml
-#############
-# Resharper #
-#############
-/_ReSharper.*
-*.ReSharper.*
+Debug/
+Debug/*
 ############
 # Packages #
 ############
@@ -56,7 +39,6 @@ TestResults/
 ######################
 .DS_Store?
 ehthumbs.db
-Icon?
 Thumbs.db
 [Bb]in
 [Oo]bj
@@ -66,12 +48,10 @@ Thumbs.db
 *.[Cc]ache
 *[Rr]esharper*
 packages
-NuGet.exe
 _[Ss]cripts
 *.exe
 *.dll
 *.nupkg
-*.ncrunchsolution
 *.dot[Cc]over
 
 ## Ignore Visual Studio temporary files, build results, and
@@ -196,19 +176,6 @@ _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
 
-# JustCode is a .NET coding add-in
-.JustCode
-
-# TeamCity is a build add-in
-_TeamCity*
-
-# DotCover is a Code Coverage Tool
-*.dotCover
-
-# AxoCover is a Code Coverage Tool
-.axoCover/*
-!.axoCover/settings.json
-
 # Visual Studio code coverage results
 *.coverage
 *.coveragexml
@@ -227,16 +194,6 @@ AutoTest.Net/
 
 # Installshield output folder
 [Ee]xpress/
-
-# DocProject is a documentation generator add-in
-DocProject/buildhelp/
-DocProject/Help/*.HxT
-DocProject/Help/*.HxC
-DocProject/Help/*.hhc
-DocProject/Help/*.hhk
-DocProject/Help/*.hhp
-DocProject/Help/Html2
-DocProject/Help/html
 
 # Click-Once directory
 publish/
@@ -411,3 +368,9 @@ ASALocalRun/
 
 #connection to database
 databaseconnection.conf
+
+Debug/
+Debug/*
+**.exe
+*.props
+*.pdb
