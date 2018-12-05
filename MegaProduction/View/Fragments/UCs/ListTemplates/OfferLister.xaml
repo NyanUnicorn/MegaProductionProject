@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="MegaProduction.View.Fragments.UCs.ListTemplates.OfferLister"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MegaProduction.View.Fragments.UCs.ListTemplates"
+             mc:Ignorable="d" MinHeight="550" Width="425">
+    <Grid>
+        <ListBox x:Name="ListBxOfferBox" Margin="0,30,0,0" BorderThickness="0,5,0,0" BorderBrush="#5597FF4C" Background="#77FAFFFA" ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+        <TextBox x:Name="TxtBxSearch" Height="30" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#77FAFFFA" TextChanged="TextBox_TextChanged"/>
+
+    </Grid>
+</UserControl>

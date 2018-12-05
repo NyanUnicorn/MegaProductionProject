@@ -50,8 +50,8 @@ namespace MegaProduction.View
             tabpage = new WelcomeTab();
             this.AppTabControl0.Items.Add(tabpage.TabElement);
             tabpage = new OfferManagerTab();
-            /*this.AppTabControl0.Items.Add(tabpage.TabElement);
-            tabpage = new ClientManagerTab();*/
+            this.AppTabControl0.Items.Add(tabpage.TabElement);
+            tabpage = new ClientManagerTab();
             this.AppTabControl0.Items.Add(tabpage.TabElement);
             tabpage = new PartnerManagerTab();
             this.AppTabControl0.Items.Add(tabpage.TabElement);            
@@ -85,9 +85,35 @@ namespace MegaProduction.View
             loadTabs();
             loadFeatures();
         }
+
+
         #endregion
 
-        
+        private void BtnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
 
+        private void BtnWinSize_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.WindowState != WindowState.Maximized)
+            {
+                this.WindowState = WindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void StatusBarWindowBar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }

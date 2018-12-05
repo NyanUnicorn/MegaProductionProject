@@ -7,14 +7,59 @@
         mc:Ignorable="d"
         VerticalContentAlignment="Stretch"
         VerticalAlignment="Stretch"
-        Title="MegaProduction" Height="614.2" Width="1146.8" Background="#FF6C6D6B" FontFamily="Franklin Gothic Book" WindowState="Maximized" WindowStartupLocation="CenterScreen" Icon="/MegaProduction;component/icon0_128.ico">
-    <Grid>
-        <TabControl x:Name="AppTabControl0" TabStripPlacement="Left" Margin="0,20,0,0" Background="#FF3F3F46" BorderBrush="#FF3F3F46" Padding="2">
+        Title="MegaProduction" Height="700" Width="1150" Background="#CC6C6D6B" FontFamily="Franklin Gothic Book" WindowState="Maximized" WindowStartupLocation="CenterScreen" Icon="/MegaProduction;component/icon0_128.ico" AllowsTransparency="True" WindowStyle="None" MinWidth="1150" MinHeight="700">
+    <Grid Margin="5,4,5,5">
+        <TabControl x:Name="AppTabControl0" TabStripPlacement="Left" Margin="0,34,0,0" Background="#FF3F3F46" BorderBrush="#FF3F3F46" Padding="2" Grid.ColumnSpan="2">
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TabItem">
+                                <Border Name="Border" BorderThickness="0,0,0,0" BorderBrush="Gainsboro" Margin="2,0">
+                                    <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header"
+                                        Margin="10,2"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Border" Property="Background" Value="#FF54A000" />
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="False">
+                                        <Setter TargetName="Border" Property="Background" Value="#FF6C6D6B" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.Resources>
         </TabControl>
-        <StatusBar Margin="0,0,95.8,0" Height="20" VerticalAlignment="Top" Background="#FF3F3F46">
-            <Label x:Name="ConnectedUserStatus0" Content="UserStatus" Width="141" Height="11" FontSize="8" Padding="0" ScrollViewer.CanContentScroll="True" Foreground="#FFF1F1F1"/>
-            <Label x:Name="ConnectedDatabaseStatus0" Content="ServerStatus" Width="174" Height="12" FontSize="8" Padding="0" ScrollViewer.CanContentScroll="True" Foreground="#FFF1F1F1"/>
+        <StatusBar x:Name="StatusBarWindowBar" Margin="2,0,120.2,0" Height="34" VerticalAlignment="Top" MouseDown="StatusBarWindowBar_MouseDown">
+            <StatusBar.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="92" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#00000000" Offset="0.541"/>
+                    <GradientStop Color="#FF3F3F46" Offset="0.134"/>
+                </LinearGradientBrush>
+            </StatusBar.Background>
+            <Label x:Name="ConnectedUserStatus0" Content="UserStatus" Width="216" Height="11" FontSize="8" Padding="0" ScrollViewer.CanContentScroll="True" Foreground="#FFF1F1F1"/>
+            <Label x:Name="ConnectedDatabaseStatus0" Content="ServerStatus" Width="200" Height="12" FontSize="8" Padding="0" ScrollViewer.CanContentScroll="True" Foreground="#FFF1F1F1"/>
         </StatusBar>
-        <Button x:Name="BtnDisconnect" Content="Déconnexion" Width="96" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,0,-0.2,0" Height="20" VerticalAlignment="Top" Foreground="#FFF1F1F1" Background="#FF3F3F46"/>
+        <Button x:Name="BtnClose" Content="X" Width="40" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0" Height="34" VerticalAlignment="Top" Foreground="#FF97FF4C" Background="#556B0000" FontSize="22" Click="BtnClose_Click"/>
+        <Button x:Name="BtnWinSize" Content="" Width="40" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,0,40.2,0" Height="34" VerticalAlignment="Top" Foreground="#FF97FF4C" FontSize="22" Click="BtnWinSize_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="{StaticResource FullScreenImg}"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BtnMinimize" Content="__" Width="40" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Margin="0,0,80.2,0" Height="34" VerticalAlignment="Top" Foreground="#FF97FF4C" Background="#003F3F46" FontSize="22" Click="BtnMinimize_Click"/>
     </Grid>
 </Window>

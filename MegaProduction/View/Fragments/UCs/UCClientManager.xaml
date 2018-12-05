@@ -7,33 +7,36 @@
              mc:Ignorable="d" d:DesignWidth="800"
              VerticalContentAlignment="Stretch"
              VerticalAlignment="Stretch">
-    <Grid x:Name="GBase" Background="#FF6C6D6B" Margin="0,0,0,0" MinWidth="800" MinHeight="474">
+    <Grid x:Name="GBase" Margin="0,0,0,0" MinWidth="800" MinHeight="474">
+        <Grid.Background>
+            <ImageBrush ImageSource="/MegaProduction;component/Images/bg1.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="14*"/>
             <ColumnDefinition Width="11*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="TxtBxClientName" HorizontalAlignment="Left" Height="30" Margin="32,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.267,0.249"/>
-        <Label x:Name="LblClientName" Content="Nom du client" HorizontalAlignment="Left" Margin="306,75,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TxtBxTelNumContact" HorizontalAlignment="Left" Height="30" Margin="32,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250"/>
+        <TextBox x:Name="TxtBxClientName" HorizontalAlignment="Left" Height="30" Margin="33,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.267,0.249" Background="#77FAFFFA"/>
+        <Label x:Name="LblClientName" Content="Nom du client" HorizontalAlignment="Left" Margin="307,110,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TxtBxTelNumContact" HorizontalAlignment="Left" Height="30" Margin="33,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Background="#77FAFFFA"/>
         <Label x:Name="LblTelNumContact" Content="Tél. pour Artistes
-               " HorizontalAlignment="Left" Margin="306,110,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TxtBxTelApplication" HorizontalAlignment="Left" Height="30" Margin="32,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250"/>
-        <Label x:Name="LblTelApplication" Content="Tél. pour Mega Prod." HorizontalAlignment="Left" Margin="306,145,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TxtBxStreet" HorizontalAlignment="Left" Height="30" Margin="32,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.267,0.249"/>
-        <Label x:Name="LblTelStreet" Content="Rue" HorizontalAlignment="Left" Margin="306,180,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TxtBxCity" HorizontalAlignment="Left" Height="30" Margin="32,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.267,0.249"/>
-        <Label x:Name="LblTelSCity" Content="Ville" HorizontalAlignment="Left" Margin="306,215,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TxtBxRegion" HorizontalAlignment="Left" Height="30" Margin="32,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.267,0.249"/>
-        <Label x:Name="LblTelSRegion" Content="Région" HorizontalAlignment="Left" Margin="306,250,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TxtBxPC" HorizontalAlignment="Left" Height="30" Margin="32,285,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.267,0.249"/>
-        <Label x:Name="LblTelSPC" Content="Code postale" HorizontalAlignment="Left" Margin="306,285,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TxtBxCountry" HorizontalAlignment="Left" Height="30" Margin="32,320,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.267,0.249"/>
-        <Label x:Name="LblTelSCountry" Content="Pays" HorizontalAlignment="Left" Margin="306,320,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
-        <ListBox x:Name="ListBxClients0" Grid.Column="1" Margin="0,110,10.4,10" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Right" Width="331"/>
-        <Button x:Name="BtnSave" Content="Sauvegarder modifications" HorizontalAlignment="Left" Margin="32,435,0,0" VerticalAlignment="Top" Width="250"/>
-        <TextBox x:Name="TxtBxSearchClient" Grid.Column="1" HorizontalAlignment="Right" Height="30" Margin="0,75,10.4,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="331" FontSize="20" TextChanged="TxtBxSearchClient_TextChanged"/>
-        <Label x:Name="LblVarOfferCount" Content="Integer" HorizontalAlignment="Left" Height="30" Margin="32,355,0,0" VerticalAlignment="Top" Width="250" Foreground="#FF97FF4C" FontSize="20" Padding="5,0"/>
-        <Label x:Name="LblOfferCount" Content="Nombre d'offre restant" HorizontalAlignment="Left" Margin="306,355,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
+               " HorizontalAlignment="Left" Margin="307,145,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TxtBxTelApplication" HorizontalAlignment="Left" Height="30" Margin="33,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" Background="#77FAFFFA"/>
+        <Label x:Name="LblTelApplication" Content="Tél. pour Mega Prod." HorizontalAlignment="Left" Margin="307,180,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TxtBxStreet" HorizontalAlignment="Left" Height="30" Margin="33,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.267,0.249" Background="#77FAFFFA"/>
+        <Label x:Name="LblTelStreet" Content="Rue" HorizontalAlignment="Left" Margin="307,215,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TxtBxCity" HorizontalAlignment="Left" Height="30" Margin="33,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.267,0.249" Background="#77FAFFFA"/>
+        <Label x:Name="LblTelSCity" Content="Ville" HorizontalAlignment="Left" Margin="307,250,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TxtBxPC" HorizontalAlignment="Left" Height="30" Margin="33,285,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.267,0.249" Background="#77FAFFFA"/>
+        <Label x:Name="LblTelSPC" Content="Code postale" HorizontalAlignment="Left" Margin="307,285,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="ListBxClients0" Grid.Column="1" Margin="0,110,10.4,10" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Right" Width="331" Background="#77FAFFFA"/>
+        <Button x:Name="BtnSave" Content="Sauvegarder modifications" HorizontalAlignment="Left" Margin="32,435,0,0" VerticalAlignment="Top" Width="250" Click="BtnSave_Click"/>
+        <TextBox x:Name="TxtBxSearchClient" Grid.Column="1" HorizontalAlignment="Right" Height="30" Margin="0,75,10.4,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="331" FontSize="20" TextChanged="TxtBxSearchClient_TextChanged" Background="#77FAFFFA"/>
+        <Label x:Name="LblVarOfferCount" Content="0" HorizontalAlignment="Left" Height="30" Margin="33,320,0,0" VerticalAlignment="Top" Width="250" Foreground="#FF97FF4C" FontSize="20" Padding="5,0"/>
+        <Label x:Name="LblOfferCount" Content="Nombre d'offre restant" HorizontalAlignment="Left" Margin="307,320,0,0" VerticalAlignment="Top" Width="200" Height="30" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="ComBxAddTokenPack" HorizontalAlignment="Left" Height="30" Margin="33,350,0,0" VerticalAlignment="Top" Width="166" Background="#77FAFFFA" SelectionChanged="ComBxAddTokenPack_SelectionChanged"/>
+        <Button x:Name="BtnAddTokenPack" Content="Add Pack" HorizontalAlignment="Left" Margin="307,350,0,0" VerticalAlignment="Top" Width="123" Height="30" Background="#77FAFFFA" Click="BtnAddTokenPack_Click"/>
+        <Button x:Name="BtnNouveauClient" Content="Nouveau" HorizontalAlignment="Left" Margin="33,75,0,0" VerticalAlignment="Top" Width="250" Height="30" Background="#77FAFFFA" Click="BtnNouveauClient_Click"/>
+        <TextBox x:Name="TxtBxCustomTokenAdd" HorizontalAlignment="Left" Height="30" Margin="204,350,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" RenderTransformOrigin="0.267,0.249" Background="#77FAFFFA" PreviewTextInput="NumberValidationTextBox"/>
 
     </Grid>
 </UserControl>

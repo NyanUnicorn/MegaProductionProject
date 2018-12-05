@@ -11,5 +11,9 @@
         <BitmapImage x:Key="SaveImage200" UriSource="pack://application:,,,/Images/saveImg0-200.png" />
         <BitmapImage x:Key="SaveHoverImage200" UriSource="pack://application:,,,/Images/saveImg0h-200.png" />
         <BitmapImage x:Key="AddHoverImage200" UriSource="pack://application:,,,/Images/AddImg0h-200.png" />
+        <BitmapImage x:Key="FullScreenImg" UriSource="pack://application:,,,/Images/Maximize.png"/>
+        <BitmapImage x:Key="WindowedImg" UriSource="pack://application:,,,/Images/DownSize.png"/>
+        <BitmapImage x:Key="Background0" UriSource="pack://application:,,,/Images/bg1.png"/>
+        
     </Application.Resources>
 </Application>

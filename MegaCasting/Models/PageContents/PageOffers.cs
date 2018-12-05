@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MegaCasting.Repositories
+namespace MegaCasting.Models.PageContents
 {
-    public class PageRep : Repository
+    public class PageOffers
     {
     }
 }

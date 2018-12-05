@@ -26,35 +26,24 @@ namespace MegaProduction.View.Fragments.UCs.ListTemplates
         private int index;
         #endregion
 
+        #region constructor
         public ClientListBxItem(UCClientManager _clientManager, int _index)
         {
             InitializeComponent();
             this.parent = _clientManager;
             this.index = _index;
         }
-
-        public ClientListBxItem()
-        {
-            InitializeComponent();
-        }
+        #endregion
 
         #region event
         /// <summary>
-        /// Evenement, quand l'item est double cliqué, ses informations sont affiché
+        /// Indiquer au parent qu'il est sélectionné
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void ClientListBxItem0_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
-            this.parent.TxtBxClientName.Text = parent.ClientList.ElementAt(this.index).Name;
-            this.parent.TxtBxTelNumContact.Text = parent.ClientList.ElementAt(this.index).TelContact;
-            this.parent.TxtBxTelApplication.Text = parent.ClientList.ElementAt(this.index).TelMGProd;
-            this.parent.TxtBxStreet.Text = parent.ClientList.ElementAt(this.index).Street;
-            this.parent.TxtBxCity.Text = parent.ClientList.ElementAt(this.index).City;
-            this.parent.TxtBxRegion.Text = parent.ClientList.ElementAt(this.index).Region;
-            this.parent.TxtBxPC.Text = parent.ClientList.ElementAt(this.index).PCode;
-            this.parent.TxtBxCountry.Text = parent.ClientList.ElementAt(this.index).Country;
+            this.parent.SelectClient(index);
         }
         #endregion
 

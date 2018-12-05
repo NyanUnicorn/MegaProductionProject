@@ -1,9 +1,9 @@
-﻿
+﻿@model MegaCasting.Models.Pages.Page_Index;
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = Model.Name;
 }
 
-<h2>Index</h2>
+<h2>@ViewData["Title"]</h2>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est expedita adipisci, sequi, velit quos repellendus rerum ipsum quis? Ut modi repellendus laboriosam nostrum obcaecati sunt, quos ab saepe quis reiciendis!</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est expedita adipisci, sequi, velit quos repellendus rerum ipsum quis? Ut modi repellendus laboriosam nostrum obcaecati sunt, quos ab saepe quis reiciendis!</p>

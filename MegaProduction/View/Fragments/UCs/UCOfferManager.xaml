@@ -1,14 +1,42 @@
-﻿<UserControl x:Class="MegaProduction.View.Fragments.UCs.UCOfferManager"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MegaProduction.View.Fragments.UCs"
+             xmlns:ListTemplates="clr-namespace:MegaProduction.View.Fragments.UCs.ListTemplates" x:Class="MegaProduction.View.Fragments.UCs.UCOfferManager"
              mc:Ignorable="d" 
-             d:DesignHeight="450" Width="835.2">
-    <Grid Background="#FF6C6D6B" Margin="0,0,0,0">
-        <ListBox x:Name="LiwtBxOffers" HorizontalAlignment="Left" Height="431" Margin="440,19,0,0" VerticalAlignment="Top" Width="396"/>
-        <Frame x:Name="FrameOfferOptions" Content="Frame" HorizontalAlignment="Left" Height="421" Margin="10,19,0,0" VerticalAlignment="Top" Width="425"/>
+             d:DesignHeight="600" MinWidth="850" FontSize="14">
+    <Grid Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="73*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="201*"/>
+            <ColumnDefinition Width="213*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/MegaProduction;component/Images/bg1.jpg"/>
+        </Grid.Background>
+
+        <ListTemplates:OfferLister  x:Name="OfferListerBx" Grid.Column="2" MinHeight="170" Margin="0,0,-0.4,0" MinWidth="165" Grid.RowSpan="2" HorizontalAlignment="Right"/>
+        <Label x:Name="LblClient" Content="Client" Grid.Column="1" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Width="390" BorderThickness="0,2,0,0" BorderBrush="#FF97FF4C" Height="28"/>
+        <ComboBox x:Name="CBClient" HorizontalAlignment="Left" Margin="0,28,0,0" Grid.Row="1" VerticalAlignment="Top" Width="282" Height="26" Background="#77FAFFFA" Grid.Column="1" SelectionChanged="CBClient_SelectionChanged"/>
+        <Label x:Name="LblTitre" Content="Titre Offre" HorizontalAlignment="Left" Margin="0,59,0,0" Grid.Row="1" VerticalAlignment="Top" Width="390" BorderThickness="0,2,0,0" BorderBrush="#FF97FF4C" Height="28" Grid.Column="1"/>
+        <TextBox x:Name="TxtTitre" Height="40" Margin="0,87,12,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Column="1" Background="#77FAFFFA"/>
+        <Label x:Name="LblDescription" Content="Description" HorizontalAlignment="Left" Margin="0,132,0,0" Grid.Row="1" VerticalAlignment="Top" Width="390" BorderThickness="0,2,0,0" BorderBrush="#FF97FF4C" Height="28" Grid.Column="1"/>
+        <TextBox x:Name="TxtDescription" Height="140" Margin="0,165,12,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Column="1" Background="#77FAFFFA"/>
+        <Label x:Name="LblStreet" Content="Rue" HorizontalAlignment="Left" Margin="0,350,0,0" Grid.Row="1" VerticalAlignment="Top" Width="390" BorderThickness="0,2,0,0" BorderBrush="#FF97FF4C" Height="28" Grid.Column="1"/>
+        <TextBox x:Name="TxtStreet" Height="26" Margin="0,383,12,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Column="1" Background="#77FAFFFA"/>
+        <Label x:Name="LblCity" Content="Ville" HorizontalAlignment="Left" Margin="0,414,0,0" Grid.Row="1" VerticalAlignment="Top" Width="390" BorderThickness="0,2,0,0" BorderBrush="#FF97FF4C" Height="28" Grid.Column="1"/>
+        <TextBox x:Name="TxtCity" Height="26" Margin="0,442,12,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Column="1" Background="#77FAFFFA"/>
+        <Label x:Name="LblPostalCode" Content="Code postale" HorizontalAlignment="Left" Margin="0,473,0,0" Grid.Row="1" VerticalAlignment="Top" Width="390" BorderThickness="0,2,0,0" BorderBrush="#FF97FF4C" Height="28" Grid.Column="1"/>
+        <TextBox x:Name="TxtPostalCode" Height="26" Margin="0,501,12,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Column="1" Background="#77FAFFFA"/>
+        <Button x:Name="BtnValider" Content="Valider 30 jours" HorizontalAlignment="Left" Margin="21.6,546,0,0" Grid.Row="1" VerticalAlignment="Top" Width="300" Grid.Column="1" Height="28" BorderThickness="0,2,0,0" BorderBrush="#FF97FF4C" Background="#77FAFFFA" Click="BtnValider_Click"/>
+        <ComboBox x:Name="CBContract" HorizontalAlignment="Left" Margin="0,310,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Height="26" Background="#77FAFFFA" Grid.Column="1"/>
+        <ComboBox x:Name="CBTalent" HorizontalAlignment="Left" Margin="202.6,310,0,0" Grid.Row="1" VerticalAlignment="Top" Width="172" Height="26" Background="#77FAFFFA" Grid.Column="1"/>
 
     </Grid>
 </UserControl>

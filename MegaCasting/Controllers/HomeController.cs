@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MegaCasting.Models;
+using MegaCasting.Models.Pages;
 
 namespace MegaCasting.Controllers
 {
@@ -12,7 +13,14 @@ namespace MegaCasting.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            Page page = new Page_Index();
+            return View(page);
+        }
+
+        public IActionResult Castings()
+        {
+            Page page = new Page_Casting();
+            return View(page);
         }
 
         public IActionResult About()

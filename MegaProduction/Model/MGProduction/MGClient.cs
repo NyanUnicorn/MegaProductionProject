@@ -10,6 +10,10 @@ namespace MegaProduction.Model.MGProduction
     {
         #region private field
         /// <summary>
+        /// Identifiant du client
+        /// </summary>
+        private int id;
+        /// <summary>
         /// Nom du client
         /// </summary>
         private String name;
@@ -30,17 +34,13 @@ namespace MegaProduction.Model.MGProduction
         /// </summary>
         private String city;
         /// <summary>
-        /// Région du client
-        /// </summary>
-        private String region;
-        /// <summary>
         /// Code postale du client
         /// </summary>
         private String pCode;
         /// <summary>
-        /// Pays du client
+        /// Nombre de tokens restant
         /// </summary>
-        private String country;
+        private int tokens;
         #endregion
 
         #region public field 
@@ -65,17 +65,17 @@ namespace MegaProduction.Model.MGProduction
         /// </summary>
         public string City { get => city; set => city = value; }
         /// <summary>
-        /// Permet de modifier ou récupérer la région du client
-        /// </summary>
-        public string Region { get => region; set => region = value; }
-        /// <summary>
         /// Permet de modifier ou récupérer le code postale du client
         /// </summary>
         public string PCode { get => pCode; set => pCode = value; }
         /// <summary>
-        /// Permet de modifier ou récupérer le pays du client
+        /// Permet de récupérer ou de modifier le nombre de tokens
         /// </summary>
-        public string Country { get => country; set => country = value; }
+        public int Tokens { get => tokens; set => tokens = value; }
+        /// <summary>
+        /// Permet de récupérer ou de modifier l'identifiant
+        /// </summary>
+        public int Id { get => id; set => id = value; }
         #endregion
     }
 }
