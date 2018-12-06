@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MegaProduction.Respositories.MGCasting
+namespace MegaCasting.DataLib.Models
 {
-    class MGTalent
+    public class ContractType
     {
         private int id;
         private String label;
-        private String description;
+        private String shortLabel;
 
-        public int Id { get => id; set => id = value; }
         public string Label { get => label; set => label = value; }
-        public string Description { get => description; set => description = value; }
+        public string ShortLabel { get => shortLabel; set => shortLabel = value; }
+        public int Id { get => id; set => id = value; }
     }
 }

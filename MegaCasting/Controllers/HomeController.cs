@@ -4,8 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using MegaCasting.Models;
 using MegaCasting.Models.Pages;
+using MegaCasting.Models;
 
 namespace MegaCasting.Controllers
 {

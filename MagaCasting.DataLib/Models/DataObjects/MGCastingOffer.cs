@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MegaCasting.DataLib.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace MegaCasting.DataLib.Models
 {
-    class MGCastingOffer
+    public class MGCastingOffer
     {
         private int id;
         private String label;
         private DateTime publicationDate;
         private String description;
-        private Location location;
-        private ContractType contract;
+        private MGLocation location;
+        private MGContractType contract;
         private MGClient client;
         private MGTalent talent;
 
@@ -26,11 +27,11 @@ namespace MegaCasting.DataLib.Models
         public String City { get => Location.Street; set => Location.Street = value; }
         public String PostalCode { get => Location.PostalCode; set => Location.PostalCode = value; }
         public int ContractId { get => contract.Id; }
-        public ContractType Contract { get => contract; set => contract = value; }
-        public Location Location { get => location; set => location = value; }
+        public MGContractType Contract { get => contract; set => contract = value; }
+        public MGLocation Location { get => location; set => location = value; }
         public MGClient Client { get => client; set => client = value; }
         public int DaysLeft { get => daysLeft(); }
-        internal MGTalent Talent { get => talent; set => talent = value; }
+        public MGTalent Talent { get => talent; set => talent = value; }
 
         private int daysLeft()
         {
@@ -40,8 +41,8 @@ namespace MegaCasting.DataLib.Models
 
         public MGCastingOffer()
         {
-            location = new Location();
-            contract = new ContractType();
+            location = new MGLocation();
+            contract = new MGContractType();
             client = new MGClient();
             talent = new MGTalent();
         }

@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace MegaProduction.Model.MGCasting
+namespace MegaCasting.DataLib.Models
 {
-    class MGCastingPack
+    public class MGCastingPack
     {
         #region private fields
         /// <summary>
